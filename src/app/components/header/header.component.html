@@ -1,0 +1,48 @@
+<header>
+  <div class="row">
+    <div class="col">
+
+      <div class="d-flex" style="
+          height: 1px;
+          margin-right: 10px;
+          margin-left: 10px;
+        ">
+        <a routerLink='/'><img src="../../../assets/img/logo.png" style="margin-top:10px;height:45px;"></a>
+        <span
+          style="line-height: 60px; font-size: 30px; font-weight: bold; padding-left:20px;color: var(--bs-white);"><a
+            style="color: var(--bs-white); text-decoration: none; font-size: 30px; font-weight: bold"
+            routerLink='/'>{{siteTitle}}</a></span>
+      </div>
+      <div class="d-flex justify-content-end" style="height: 50px; margin-top: 10px;">
+
+        <div class="d-flex">
+          <div class="d-flex" style="font-family: montserrat;; line-height: 50px; color: #fff; margin-right: 10px;">
+            total minted: {{minted}}
+          </div>
+        </div>
+
+        <ul class="list-inline text-end" style="
+            width: 400px;
+            color: var(--bs-white);
+            height: 100%;
+            padding-right: 40px;
+            font-family: montserrat;
+          ">
+          <li class="list-inline-item" style="line-height: 50px; margin-right: 40px">
+            <a style="color: var(--bs-white); text-decoration: none; font-weight: 400; font-size: 18px" *ngIf="isHolder"
+              [routerLink]="'holders'">Holders Only</a>
+          </li>
+          <li class="list-inline-item" style="line-height: 50px; margin-right: 20px">
+            <a style="color: var(--bs-white); text-decoration: none; font-weight: 400; font-size: 18px"
+              [routerLink]="'registry'">Registry</a>
+          </li>
+        </ul>
+        <button class="btn btn-primary" type="button" (click)="connectClicked()" [style]="buttonStyle">
+          {{ _connected ? 'Refresh' : 'Connect' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<m-web3-modal title="Modal Title" description="Modal description" descriptionGray="Modal subtitle"
+  dismissText="Text that will dismiss modal on click"></m-web3-modal>

@@ -1,0 +1,17 @@
+.input-validation-error {
+  border-color: #e03d4c;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.price {
+  line-height: 50px;
+  margin: 10px;
+  background-color: #aaa;
+  color: #fff;
+  font-weight: bold;
+}
+
+.input-group-prepend {
+  background-color: #aaa;
+}

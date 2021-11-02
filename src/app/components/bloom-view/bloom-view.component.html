@@ -1,0 +1,5 @@
+<div class="col text-center justify-content-xxl-start align-items-xxl-start" style="background: #141414; min-height:400px">
+  <pagination-controls style="color: #fff" (pageChange)="p = $event"></pagination-controls>
+  <app-bloom-view-panel *ngFor="let bloom of items | paginate: {itemsPerPage: 12, currentPage: p}" [bloom]="bloom"></app-bloom-view-panel>
+  <pagination-controls style="color: #fff" (pageChange)="p = $event"></pagination-controls>
+</div>
